@@ -6,5 +6,9 @@
   margin: 0 auto;
   display: block;
   max-width: 200px;
-  vertical-align: middle;
+}
+
+.App-footer {
+  margin: 30px;
+  text-align: center;
 }
