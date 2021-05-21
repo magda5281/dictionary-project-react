@@ -1,14 +1,17 @@
 import React, {useState} from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictionary.css"
 
 
 export default function Dictioanry(){
 
     let [keyword, setKeyword]= useState("");
+    let [resultsValue, setResultsValue]=useState(null);
 
     function handleResponse(response){
-        console.log(response.data[0]);
+        setResultsValue(response.data[0]);
+
     }
    
     function handleKeywordChange(event){
@@ -17,7 +20,6 @@ export default function Dictioanry(){
 
     function Search(event){
         event.preventDefault()
-
         // documentation: https://dictionaryapi.dev/
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
        
@@ -31,10 +33,11 @@ export default function Dictioanry(){
             type="search"
             placeholder="Type a word"
             autoFocus={true}
-
             />
-
         </form>
-        
+        <div>
+              <Results results={resultsValue}/>    
+        </div>
+         
     </div>);
 }
