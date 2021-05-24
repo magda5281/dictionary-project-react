@@ -11,7 +11,6 @@ export default function Dictioanry(){
 
     function handleResponse(response){
         setResultsValue(response.data[0]);
-
     }
    
     function handleKeywordChange(event){
