@@ -14,7 +14,7 @@ export default function App() {
           <Dictionary/>
         </main>
         <footer className="App-footer">
-          Coded by Magda Gozdalik
+          Coded by <a href="https://www.linkedin.com/in/magdalena-gozdalik-3458202b/">Magda Gozdalik</a> and is open-sourced on <a href="https://github.com/magda5281/dictionary-project-react">GitHub</a> and hosted on <a href="https://dreamy-wozniak-7dc527.netlify.app/"> Netlify</a>.
         </footer>
       </div>
     </div> 
