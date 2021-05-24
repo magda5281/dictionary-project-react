@@ -26,7 +26,8 @@ export default function Dictioanry(){
     }
     return (
     <div className="Dictionary">
-        <form onSubmit={Search}>
+        <section>
+            <form onSubmit={Search}>
             <input 
             onChange={handleKeywordChange}
             type="search"
@@ -34,6 +35,7 @@ export default function Dictioanry(){
             autoFocus={true}
             />
         </form>
+        </section>
         <div>
               <Results results={resultsValue}/>    
         </div>

@@ -2,6 +2,16 @@
   text-align: center;
 }
 
-.Dictionary .Results {
+.Dictionary section {
   text-align: start;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid;
+  box-shadow: 5px 10px 15px grey;
+  margin: 20px;
+}
+
+.Dictionary input {
+  width: 100%;
 }
