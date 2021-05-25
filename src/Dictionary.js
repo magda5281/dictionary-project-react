@@ -4,10 +4,11 @@ import Results from "./Results";
 import "./Dictionary.css"
 
 
-export default function Dictioanry(){
+export default function Dictioanry(props){
 
-    let [keyword, setKeyword]= useState("");
+    let [keyword, setKeyword]= useState(props.defaultKeyword);
     let [resultsValue, setResultsValue]=useState(null);
+    let [loaded, setLoaded]=useState(false);
 
     function handleResponse(response){
         setResultsValue(response.data[0]);
@@ -17,21 +18,30 @@ export default function Dictioanry(){
         setKeyword(event.target.value);
     }
 
-    function Search(event){
-        event.preventDefault()
-        // documentation: https://dictionaryapi.dev/
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-       
+    function search (){
+         // documentation: https://dictionaryapi.dev/
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;      
         axios.get(apiUrl).then(handleResponse);
     }
-    return (
+
+    function handleSubmit(event){
+        event.preventDefault()
+        search();   
+    }
+
+    function load(){
+        search();
+        setLoaded(true);
+    }
+    if (loaded){
+         return (
     <div className="Dictionary">
         <section>
-            <form onSubmit={Search}>
+            <form onSubmit={handleSubmit}>
             <input 
             onChange={handleKeywordChange}
             type="search"
-            placeholder="Type a word"
+            placeholder="Search for a word"
             autoFocus={true}
             />
         </form>
@@ -41,4 +51,10 @@ export default function Dictioanry(){
         </div>
          
     </div>);
+    } else {
+        load()
+        return "Loading"
+
+    }
+   
 }

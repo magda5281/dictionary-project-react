@@ -7,11 +7,13 @@
   background: white;
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid;
-  box-shadow: 5px 10px 15px grey;
-  margin: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 10px 20px grey;
+  margin: 30px 20px;
 }
-
 .Dictionary input {
   width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }

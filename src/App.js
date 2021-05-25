@@ -11,7 +11,7 @@ export default function App() {
           <img src={dictionaryIcon} className="App-logo" alt="logo"/>        
         </header>
         <main>
-          <Dictionary/>
+          <Dictionary defaultKeyword = "sunset"/>
         </main>
         <footer className="App-footer">
           Coded by <a href="https://www.linkedin.com/in/magdalena-gozdalik-3458202b/">Magda Gozdalik</a> and is open-sourced on <a href="https://github.com/magda5281/dictionary-project-react">GitHub</a> and hosted on <a href="https://dreamy-wozniak-7dc527.netlify.app/"> Netlify</a>.
