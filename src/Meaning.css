@@ -1,0 +1,16 @@
+.Meaning {
+  color: #202124;
+}
+
+.Meaning h3 {
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.Meaning .definition {
+  margin-bottom: 10px;
+}
+.Meaning .example {
+  font-style: italic;
+  opacity: 0.6;
+}

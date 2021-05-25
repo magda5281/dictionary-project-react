@@ -1,7 +1,8 @@
-
-import './App.css';
 import dictionaryIcon from "./dictionaryIcon.png";
 import Dictionary from "./Dictionary";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
 
 export default function App() {
   return ( 

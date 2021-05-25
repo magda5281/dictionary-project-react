@@ -44,6 +44,7 @@ export default function Dictioanry(props){
             placeholder="Search for a word"
             autoFocus={true}
             />
+            
         </form>
         </section>
         <div>
