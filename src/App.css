@@ -5,6 +5,11 @@ body {
   margin: 0 auto;
   max-width: 900px;
 }
+.App h1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 28px;
+}
 
 .App-header {
   margin: 30px;

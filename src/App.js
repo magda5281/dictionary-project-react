@@ -9,7 +9,10 @@ export default function App() {
     <div className="App">
       <div className="container">              
         <header className="App-header">
-          <img src={dictionaryIcon} className="App-logo" alt="logo"/>        
+          <img src={dictionaryIcon} className="App-logo" alt="logo"/> 
+          <h1>
+            Dictionary      
+          </h1>
         </header>
         <main>
           <Dictionary defaultKeyword = "sunset"/>
